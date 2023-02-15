@@ -27,12 +27,17 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>React Stoper App</h1>
+    <div className={'container'}>
       <Stopper time={time} />
-      <button onClick={start}>Start</button>
-      <button onClick={stop}>Stop</button>
-      <button onClick={reset}>Reset</button>
+      <button className={'button'} onClick={start}>
+        Start
+      </button>
+      <button className={'button'} onClick={stop}>
+        Stop
+      </button>
+      <button className={'button'} onClick={reset}>
+        Reset
+      </button>
     </div>
   );
 };

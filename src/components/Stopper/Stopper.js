@@ -1,3 +1,5 @@
+import styles from './Stopper.module.scss';
+
 const Stoper = (props) => {
   const formatTime = (miliseconds) => {
     let ms = Math.floor(miliseconds % 100);
@@ -8,12 +10,12 @@ const Stoper = (props) => {
     hours = String(hours).padStart(2, '0');
     minutes = String(minutes).padStart(2, '0');
     seconds = String(seconds).padStart(2, '0');
-    ms = String(miliseconds).padStart(2, '0').slice(-2);
+    ms = String(miliseconds).padStart(1, '0').slice(-3);
 
     return `${hours}:${minutes}:${seconds}.${ms}`;
   };
 
-  return <div>{formatTime(props.time)}</div>;
+  return <div className={styles.stopper}>{formatTime(props.time)}</div>;
 };
 
 export default Stoper;
